@@ -1,0 +1,144 @@
+
+:root {
+        --accent-color: #f2c3c3;
+        --accent2-color: #f2d894;
+        --accent3-color: #a1d9d1;
+        --accent4-color: #ffc6ae;
+        --primary-color: #d19f77;
+        --dark-text-color: #6a4628;
+        --gray-text-color: #a39388;
+        --button-padding-x: 15px;
+        --button-padding-y: 10px;
+        --font-family-body: Nunito Sans, sans-serif;
+        --light-text-color: #ffffff;
+        --dark-border-color: #5e4440;
+        --light-border-color: #ede3d5;
+        --font-family-heading: Poppins, sans-serif;
+        --button-rounded-radius: 10px;
+        --dark-background-color: #634737;
+        --light-background-color: #f9f3ec;
+        --medium-background-color: #ede2d4;
+        --primary-button-text-color: #ffffff;
+        --secondary-button-bg-color: #f2e4d4;
+        --secondary-button-text-color: #6d4f32;
+        --primary-button-hover-bg-color: #b48862;
+        --primary-button-hover-text-color: #ffffff;
+        --secondary-button-hover-bg-color: #e0d1c6;
+        --secondary-button-hover-text-color: #6a4628;
+    }
+
+/* Contenedor del botón fijo */
+.back-button-wrapper {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 50;
+}
+
+/* Botón redondo con sombra y efecto hover */
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;   /* 12 * 0.25rem */
+  height: 3rem;
+  background-color: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+/* Icono de la flecha */
+.back-button__icon {
+  font-size: 1.5rem; /* 24px aprox */
+  color: var(--primary-color, #e11d48); /* usa tu color o uno por defecto */
+  transition: transform 0.3s ease;
+}
+
+/* Al hacer hover en el botón, la flecha se desplaza a la izquierda */
+.back-button:hover .back-button__icon {
+  transform: translateX(-4px);
+}
+
+/* Animación opcional de “latido/salto” continuo */
+@keyframes back-button-bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Chat Flotante Sticky - Optimizado Móvil */
+#floating-chat {
+  position: fixed;
+  bottom: 5.5rem; right: 1.5rem;
+  z-index: 99;
+  max-width: 22rem; width: calc(100vw - 3rem);
+  height: 28rem !important;
+  max-height: 28rem; /* 448px */
+  transform: translateY(100%) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); /* Overshoot suave */
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.30);
+}
+#floating-chat > div { 
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+#floating-chat.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+#floating-chat .chat-message {
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+/* Botón Toggle */
+#chat-toggle {
+  position: fixed; bottom: 1rem; right: 1rem;
+  z-index: 100; width: 3.2rem; height: 3.2rem;
+  background: linear-gradient(135deg, var(--dark-text-color) 0%, var(--primary-button-hover-bg-color) 100%);
+  border: none; border-radius: 9999px;
+  box-shadow: 0 10px 30px -6px rgba(59,130,246,0.4);
+  transition: all 0.3s ease; cursor: pointer;
+}
+#chat-toggle:hover { transform: scale(1.1); box-shadow: 0 15px 40px -8px rgba(52, 53, 54, 0.5); }
+#chat-toggle:active { transform: scale(0.98); }
+
+.chat-message {
+  animation: slideIn 0.3s ease-out;
+  margin: 0.60rem 0 !important;
+  padding: 0.6rem 1rem !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 90% !important;
+  line-height: 1;
+}
+
+#chatDisplay { 
+  flex: 1 1 auto !important;  
+  min-height: 0 !important;  
+}
+    

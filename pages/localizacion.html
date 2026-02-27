@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Dónde Estamos | Meloso Brunch & Coffee</title>
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!---<script src="https://cdn.tailwindcss.com/"></script>-->
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="/fontawesome/css/all.css">
+  <link rel="stylesheet" href="/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+
+<style> 
+:root {
+      --accent-color: #f2c3c3;
+      --accent2-color: #f2d894;
+      --accent3-color: #a1d9d1;
+      --accent4-color: #ffc6ae;
+      --primary-color: #d19f77;
+      --dark-text-color: #6a4628;
+      --gray-text-color: #a39388;
+      --light-text-color: #ffffff;
+      --dark-background-color: #634737;
+      --light-background-color: #f9f3ec;
+      --medium-background-color: #ede2d4;
+      --button-rounded-radius: 10px;
+      --font-family-body: 'Nunito Sans', sans-serif;
+      --font-family-heading: 'Poppins', sans-serif;
+}
+    body { font-family: var(--font-family-body); background-color: var(--light-background-color); color: var(--dark-text-color); }
+    h1,h2,h3,h4 { font-family: var(--font-family-heading); }
+    a{color:#6a4628;}
+
+    
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Botón retroceso -->
+  <div class="back-button-wrapper">
+    <a href="javascript:history.back()" class="back-button">
+      <i class="fas fa-arrow-left back-button__icon"></i>
+    </a>
+  </div>
+
+  <!-- Sección Hero con mapa grande -->
+  <section class="relative bg-[var(--primary-color)] py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="container mx-auto px-4 relative z-10 text-center">
+      <div class="inline-flex items-center justify-center w-24 h-24 bg-white rounded-full mb-8 shadow-2xl">
+        <i class="fas fa-map-marker-alt text-4xl text-[var(--primary-color)]"></i>
+      </div>
+      <h1 class="font-[var(--font-family-heading)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+        Dónde Estamos
+      </h1>
+      <p class="text-xl text-white opacity-90 max-w-2xl mx-auto">
+        Te esperamos en el corazón de Portonovo, a pocos pasos del mar
+      </p>
+    </div>
+  </section>
+
+  <!-- Mapa de Google + Info -->
+  <section class="bg-[var(--light-background-color)] py-16 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Google Maps -->
+        <div class="order-2 lg:order-1">
+          <div class=" relative overflow-hidden rounded-3xl shadow-2xl w-full lg:h-full min-h-96 mt-24">
+            <iframe 
+              src="https://www.google.com/maps?q=42.395418,-8.82501&z=20&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="absolute inset-0">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Caja de información (igual que la del footer y la home) -->
+        <div class="order-1 lg:order-2">
+          <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl">
+            <h2 class="font-[var(--font-family-heading)] text-3xl lg:text-4xl font-bold text-[var(--dark-text-color)] mb-8">
+              Ven a visitarnos
+            </h2>
+
+            <div class="space-y-8">
+              <div class="flex items-start gap-5">
+                <div class="w-14 h-14 bg-[var(--primary-color)] rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-location-dot text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-xl mb-2">Dirección</h3>
+                  <p class="text-[var(--gray-text-color)] leading-relaxed">
+                    Rúa Rafael Picó, 28<br>
+                    36970 Portonovo, Pontevedra<br>
+                    Galicia, España
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-5">
+                <div class="w-14 h-14 bg-[var(--primary-color)] rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-clock text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-xl mb-2">Horario</h3>
+                  <p class="text-[var(--gray-text-color)] leading-relaxed">
+                    Lunes a Domingo<br>
+                    <strong class="text-[var(--dark-text-color)]">9:00 – 17:00 h</strong>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-5">
+                <div class="w-14 h-14 bg-[var(--primary-color)] rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="fab fa-instagram text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-xl mb-2">Síguenos</h3>
+                  <a href="https://instagram.com/melosobrunchcoffee" target="_blank" class="hover:underline font-semibold">
+                    @melosobrunchcoffee
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botones CTA -->
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=R%C3%BAa+Rafael+Pic%C3%B3+28%2C+Portonovo" 
+                 target="_blank"
+                 class="inline-flex items-center justify-center gap-3 bg-[var(--primary-color)] text-white px-8 py-4 rounded-[var(--button-rounded-radius)] hover:bg-[#b48862] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:scale-105">
+                <i class="fas fa-directions"></i>
+                Cómo llegar
+              </a>
+              <a href="https://wa.me/34666123456" 
+                 target="_blank"
+                 class="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-[var(--primary-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] hover:bg-[var(--primary-color)] hover:text-white transition-all duration-300 font-semibold">
+                <i class="fab fa-whatsapp"></i>
+                Reservar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer pequeño (opcional, si la usas como página independiente) -->
+  <footer class="bg-[var(--dark-background-color)] text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm opacity-70">
+        © 2025 Meloso Brunch & Coffee | Rúa Rafael Picó 28, Portonovo
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

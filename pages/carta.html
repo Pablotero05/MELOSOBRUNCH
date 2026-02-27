@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
+  <title>Carta | Meloso Brunch & Coffee</title>
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!---<script src="https://cdn.tailwindcss.com/"></script>-->
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="/fontawesome/css/all.css">
+  <link rel="stylesheet" href="/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  
+
+  <style>
+    :root {
+      --accent-color: #f2c3c3;
+      --accent2-color: #f2d894;
+      --primary-color: #d19f77;
+      --dark-text-color: #6a4628;
+      --gray-text-color: #a39388;
+      --light-background-color: #f9f3ec;
+      --dark-background-color: #634737;
+      --button-rounded-radius: 12px;
+      --font-family-heading: 'Poppins', sans-serif;
+      --font-family-body: 'Nunito Sans', sans-serif;
+    }
+    body { background:var(--light-background-color); color:var(--dark-text-color); font-family:var(--font-family-body); }
+    h1,h2,h3 { font-family:var(--font-family-heading); }
+    .price { color:var(--primary-color); font-weight:800; font-size:1.15rem; }
+    .section-title {
+      font-size:2.5rem; font-weight:800; color:var(--dark-text-color);
+      position:relative; display:inline-block; padding-bottom:8px;
+    }
+    .section-title:after {
+      content:''; position:absolute; left:0; bottom:0; width:80px; height:5px;
+      background:var(--primary-color); border-radius:3px;
+    }
+    .dish-name { font-weight:700; font-size:1.15rem; color:var(--dark-text-color); }
+    .dish-desc { font-size:0.95rem; color:var(--gray-text-color); line-height:1.5; }
+    .gluten-free { background:var(--accent2-color); color:var(--dark-text-color); padding:4px 10px; border-radius:20px; font-size:0.8rem; font-weight:600; }
+  
+  
+    html, body {
+      overflow-x: hidden;
+      width: 100vw;
+    }
+    
+    body {
+      min-width: 320px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Para que textos gigantes no rompan el layout en móvil */
+    .whitespace-nowrap {
+      min-width: 0;
+    }
+
+    /* Responsive perfecto del hashtag */
+    @media (max-width: 640px) {
+      #bemeloso {
+        font-size: 7vw !important;
+        line-height: 0.9;
+      }
+    }
+</style>
+
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Botón retroceso -->
+  <div class="back-button-wrapper">
+    <a href="javascript:history.back()" class="back-button">
+      <i class="fas fa-arrow-left back-button__icon"></i>
+    </a>
+  </div>
+
+  <!-- Hero elegante -->
+  <section class="relative bg-gradient-to-br from-[#d19f77] via-[#c98b5e] to-[#b4764f] py-28 overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <div class="inline-flex items-center justify-center w-28 h-28 bg-white rounded-full mb-8 shadow-2xl">
+        <i class="fas fa-coffee text-5xl text-[var(--primary-color)]"></i>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-black text-white mb-4">Nuestra Carta</h1>
+      <p class="text-xl md:text-2xl text-white opacity-90 max-w-3xl mx-auto">
+        Brunch todo el día • Lunes–Viernes 9:00–17:00 h<br>
+        Sábado–Domingo 9:00–18:30 h (viernes y sábado noche hasta 21:00)
+      </p>
+    </div>
+  </section>
+
+  <!-- Menú bonito -->
+  <section class="py-16 lg:py-24">
+    <div class="container mx-auto px-6 max-w-6xl">
+
+      <div class="grid lg:grid-cols-2 gap-16">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="space-y-16">
+
+          <!-- TOSTADAS -->
+          <div>
+            <h2 class="section-title mb-10 flex items-center gap-4">
+              <i class="fas fa-bread-slice text-4xl text-[var(--primary-color)]"></i> TOSTADAS
+            </h2>
+            <div class="space-y-7 bg-white rounded-3xl p-8 shadow-xl">
+              <div class="flex justify-between items-start"><div><span class="dish-name">MAÑANERA</span><br><span class="dish-desc">Pan de cristal, aguacate, tomate rallado y AOVE</span></div><span class="price">9,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">REMEDIOS</span><br><span class="dish-desc">Tomate rallado con aceite y ajo</span></div><span class="price">5,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">CATALANA</span><br><span class="dish-desc">Pan de cristal, tomate y jamón serrano</span></div><span class="price">9,00€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">CLEMENTE</span><br><span class="dish-desc">Jamón york, queso, tomate rallado, AOVE y orégano</span></div><span class="price">9,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">BURRI CHERRY</span><br><span class="dish-desc">Crema de queso, cherrys, tomate rallado, queso curado, rúcula y AOVE</span></div><span class="price">10,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">COMBI PERFECTA</span><br><span class="dish-desc">Aguacate, queso crema, salmón ahumado, huevo pochado, cherry y cebolla roja</span></div><span class="price">13,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">LUCHO</span><br><span class="dish-desc">Crema de cacahuete, plátano, cacao nibs y miel</span></div><span class="price">9,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">NORUEGA</span><br><span class="dish-desc">Salmón ahumado, queso crema, pepino, eneldoy lima</span></div><span class="price">12,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">SICILIANA</span><br><span class="dish-desc">Burrata, tomate cherry, pesto de albahaca y AOVE</span></div><span class="price">12,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">MELOSA</span><br><span class="dish-desc">Queso crema, mortadela trufada y pistacho</span></div><span class="price">11,50€</span></div>
+              <div class="flex justify-between items-start"><div><span class="dish-name">PAOLA</span><br><span class="dish-desc">Crema de queso, lacón a la gallega y cebolla caramelizada</span></div><span class="price">11,50€</span></div>
+              <div class="pt-4 text-center"><span class="gluten-free">OPCIÓN SIN GLUTEN +1,00€</span></div>
+            </div>
+          </div>
+
+          <!-- TORTITAS -->
+          <div>
+            <h2 class="section-title mb-10 flex items-center gap-4">
+              <i class="fas fa-pancakes text-4xl text-[var(--primary-color)]"></i> TORTITAS
+            </h2>
+            <div class="space-y-7 bg-white rounded-3xl p-8 shadow-xl">
+              <div class="flex justify-between"><div><span class="dish-name">AMERICANA</span><br><span class="dish-desc">Bacon, huevo, sirope de arce y mantequilla</span></div><span class="price">12,00€</span></div>
+              <div class="flex justify-between"><div><span class="dish-name">POWER</span><br><span class="dish-desc">Plátano, crema de cacahuete, sirope y cacao nibs</span></div><span class="price">11,50€</span></div>
+              <div class="flex justify-between"><div><span class="dish-name">TROPICAL</span><br><span class="dish-desc">Frutas de temporada, sirope de mango y coco rallado</span></div><span class="price">11,50€</span></div>
+              <div class="flex justify-between"><div><span class="dish-name">NUTRI OREO</span><br><span class="dish-desc">Crema de Oreo, Oreo triturada y sirope de chocolate</span></div><span class="price">12,00€</span></div>
+              <div class="flex justify-between"><div><span class="dish-name">HAPPY KINDER</span><br><span class="dish-desc">Crema de Kinder Bueno y sirope de chocolate</span></div><span class="price">13,00€</span></div>
+              <div class="flex justify-between"><div><span class="dish-name">CARLOTA</span><br><span class="dish-desc">Crema de speculoos, galleta Lotus y caramelo</span></div><span class="price">12,50€</span></div>
+              <div class="flex justify-between"><div><span class="dish-name">LOTUS LOVERS</span><br><span class="dish-desc">Crema de speculoos, galleta Lotus y helado de vainilla</span></div><span class="price">13,50€</span></div>
+            </div>
+          </div>
+
+          <!-- GOFRYS & CREPES -->
+          <div>
+            <h2 class="section-title mb-10 flex items-center gap-4">
+              <i class="fas fa-stroopwafel text-4xl text-[var(--primary-color)]"></i> GOFRYS & CREPES
+            </h2>
+            <div class="bg-white rounded-3xl p-8 shadow-xl text-center">
+              <p class="text-lg font-bold mb-4">Bases: Gofre / Crepe +1,50€</p>
+              <div class="grid grid-cols-2 gap-3 text-sm">
+                <div>Nutella</div><div>Speculoos</div>
+                <div>Crema de cacahuete</div><div>Crema de kinder</div>
+                <div>Dulce de leche</div><div>Fruta de temporada</div>
+                <div>Helado de vainilla</div><div>Galleta Lotus</div>
+                <div>Oreo triturada</div><div>Lacasitos</div>
+                <div>Kinder Bueno</div><div class="col-span-2 font-bold text-[var(--primary-color)]">BOLA HELADO +1,50€ • YOGUR +1,00€ • PLÁTANO +1,00€</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="space-y-16">
+
+          <!-- BRUNCH + FRENCH TOAST + BOWLS -->
+          <div class="space-y-16">
+
+            <div>
+              <h2 class="section-title mb-10 flex items-center gap-4">
+                <i class="fas fa-heart text-4xl text-[var(--primary-color)]"></i> BRUNCH & FRENCH TOAST
+              </h2>
+              <div class="bg-white rounded-3xl p-8 shadow-xl space-y-7">
+                <div class="flex justify-between"><div><span class="dish-name">OBSESSION</span><br><span class="dish-desc">Tostada de aguacate, huevo pochado, salmón, queso crema y eneldo</span></div><span class="price">16,00€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">MAMAMIA</span><br><span class="dish-desc">Tostada de mortadela trufada, burrata, pesto y tomate cherry</span></div><span class="price">15,50€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">LONDON</span><br><span class="dish-desc">Brioche, crema de speculoos, plátano y sirope de arce</span></div><span class="price">12,00€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">ROSCO</span><br><span class="dish-desc">Brioche, Nutella, fresas y helado de vainilla</span></div><span class="price">13,00€</span></div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="section-title mb-10 flex items-center gap-4">
+                <i class="fas fa-bowl-food text-4xl text-[var(--primary-color)]"></i> BOWLS
+              </h2>
+              <div class="bg-white rounded-3xl p-8 shadow-xl space-y-7">
+                <div class="flex justify-between"><div><span class="dish-name">AFRUTADO</span><br><span class="dish-desc">Yogur griego, granola casera, frutas frescas y miel</span></div><span class="price">9,00€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">MORENITO</span><br><span class="dish-desc">Açaí, plátano, fresas, granola y mantequilla de cacahuete</span></div><span class="price">11,00€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">POISON</span><br><span class="dish-desc">Açaí, mango, piña, granola y coco rallado</span></div><span class="price">11,00€</span></div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="section-title mb-10 flex items-center gap-4">
+                <i class="fas fa-croissant text-4xl text-[var(--primary-color)]"></i> CROISSANT MANTEQUILLA
+              </h2>
+              <div class="bg-white rounded-3xl p-8 shadow-xl space-y-7">
+                <div class="flex justify-between"><div><span class="dish-name">PLANCHADO</span></div><span class="price">3,50€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">REVOLTOSO</span> — Jamón york y queso</div><span class="price">5,50€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">SACRIOTO</span> — Nutella y plátano flambeado</div><span class="price">6,00€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">REVOLTOSO + HUEVO</span></div><span class="price">7,00€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">KINDER</span></div><span class="price">6,00€</span></div>
+                <div class="flex justify-between"><div><span class="dish-name">LOTUS</span></div><span class="price">6,00€</span></div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="section-title mb-10 flex items-center gap-4">
+                <i class="fas fa-seedling text-4xl text-[var(--primary-color)]"></i> SIN GLUTEN 100%
+              </h2>
+              <div class="bg-white rounded-3xl p-8 shadow-xl text-center space-y-4">
+                <div class="flex justify-between"><div>MUFFINS</div><span class="price">3,50€</span></div>
+                <div class="flex justify-between"><div>BANANA BREAD</div><span class="price">4,00€</span></div>
+                <div class="flex justify-between"><div>COOKIES</div><span class="price">3,50€</span></div>
+                <div class="flex justify-between"><div>BOLSA MINI COOKIES</div><span class="price">7,00€</span></div>
+                <div class="flex justify-between"><div>BOLLA PAN SARRACENO</div><span class="price">7,00€</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Final épico -->
+      <div class="text-center mt-24">
+        <h2 id="bemeloso" class="text-6xl md:text-8xl font-black text-[var(--primary-color)] tracking-wider">
+          #BEMELOSOMYFRIEND
+        </h2>
+        <p class="text-2xl text-[var(--dark-text-color)] mt-6">Rúa Rafael Picó 28, Portonovo</p>
+        <p class="text-xl text-[var(--gray-text-color)]">@melosobrunchcoffee</p>
+
+        <div class="mt-12">
+          <a href="contacto.html" class="inline-flex items-center gap-4 bg-[var(--primary-color)] text-white px-12 py-6 rounded-full text-2xl font-bold shadow-2xl hover:bg-[#b48862] hover:scale-105 transition-all duration-300">
+            <i class="fas fa-calendar-check"></i> Reserva tu mesa ahora
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark-background-color)] text-white py-12 mt-auto">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-sm opacity-70">© 2025 Meloso Brunch & Coffee • Portonovo, Galicia</p>
+    </div>
+  </footer>
+
+</body>
+</html>

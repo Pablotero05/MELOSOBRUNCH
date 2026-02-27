@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Sobre Nosotros | Meloso Brunch & Coffee</title>
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!---<script src="https://cdn.tailwindcss.com/"></script>-->
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="/fontawesome/css/all.css">
+  <link rel="stylesheet" href="/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  
+
+    <style>
+    :root {
+      --accent-color: #f2c3c3;
+      --accent2-color: #f2d894;
+      --primary-color: #d19f77;
+      --dark-text-color: #6a4628;
+      --gray-text-color: #a39388;
+      --light-background-color: #f9f3ec;
+      --dark-background-color: #634737;
+      --button-rounded-radius: 12px;
+      --font-family-heading: 'Poppins', sans-serif;
+      --font-family-body: 'Nunito Sans', sans-serif;
+    }
+    body { background:var(--light-background-color); color:var(--dark-text-color); font-family:var(--font-family-body); }
+    h1,h2,h3 { font-family:var(--font-family-heading); }
+
+    #bemeloso{
+      justify-self: center;
+    }
+
+    @media (max-width: 640px) {
+      #bemeloso {
+        font-size: 7vw !important;
+        line-height: 0.9;
+      }
+
+      #textfinal{
+        font-size: 5vw;
+      }
+
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Botón retroceso -->
+  <div class="back-button-wrapper">
+    <a href="javascript:history.back()" class="back-button">
+      <i class="fas fa-arrow-left back-button__icon"></i>
+    </a>
+  </div>
+
+  <!-- Hero cálido y meloso -->
+  <section class="relative bg-gradient-to-br from-[#d19f77] via-[#e2b89a] to-[#f2d894] py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-10"></div>
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <div class="inline-flex items-center justify-center w-32 h-32 bg-white rounded-full mb-10 shadow-2xl">
+        <img src="../assets/public.avif" alt="Meloso Bear" class="w-20">
+      </div>
+      <h1 class="text-5xl md:text-7xl font-black text-white mb-6">Sobre Nosotros</h1>
+      <p class="text-2xl md:text-3xl text-white opacity-95 max-w-4xl mx-auto leading-relaxed">
+        Un rinconcito lleno de abrazos, café de especialidad y brunch que te hace feliz
+      </p>
+    </div>
+  </section>
+
+  <!-- Historia + valores -->
+  <section class="py-20 lg:py-28">
+    <div class="container mx-auto px-6 max-w-5xl">
+
+      <!-- Nuestra historia -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div class="order-2 lg:order-1">
+          <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/5765ab8c-6baf-4654-a008-2f50f0c44d00/public" 
+               alt="Equipo Meloso" class="w-full rounded-3xl shadow-2xl object-cover">
+        </div>
+        <div class="order-1 lg:order-2">
+          <h2 class="text-4xl lg:text-5xl font-black mb-8 text-[var(--dark-text-color)]">
+            Nació un sueño (y un osito muy meloso)
+          </h2>
+          <p class="text-lg leading-relaxed text-[var(--gray-text-color)] mb-6">
+            Meloso Brunch & Coffee abrió sus puertas en 2023 en el corazón de Portonovo con una idea muy clara: 
+            crear un espacio donde el café supiera a hogar y cada plato te sacara una sonrisa.
+          </p>
+          <p class="text-lg leading-relaxed text-[var(--gray-text-color)] mb-6">
+            Aquí no solo servimos brunch todo el día… 
+            servimos buenos momentos, risas con amigos, primeras citas, reuniones familiares y hasta esas mañanas en las que solo necesitas un café y un abrazo (aunque sea en forma de tostada).
+          </p>
+          <p class="text-lg leading-relaxed font-semibold">
+            Porque para nosotros, ser meloso no es solo un nombre… es una forma de tratar a la gente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Lo que nos hace diferentes -->
+      <div class="bg-white rounded-3xl p-10 lg:p-16 shadow-2xl text-center">
+        <h2 class="text-4xl lg:text-5xl font-black mb-12">Lo que nos hace especiales</h2>
+        
+        <div class="grid md:grid-cols-3 gap-10">
+
+          <div class="space-y-4">
+            <div class="w-20 h-20 bg-[var(--primary-color)] rounded-full flex items-center justify-center mx-auto shadow-lg">
+              <i class="fa-solid fa-mug-hot text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Café de especialidad</h3>
+            <p class="text-[var(--gray-text-color)]">Tostado exclusivamente para nosotros. Suave, aromático y con amor en cada taza.</p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="w-20 h-20 bg-[var(--accent2-color)] rounded-full flex items-center justify-center mx-auto shadow-lg">
+              <i class="fas fa-utensils text-3xl text-[var(--dark-text-color)]"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Brunch todo el día</h3>
+            <p class="text-[var(--gray-text-color)]">Porque las tortitas a las 4 de la tarde también son felicidad permitida.</p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="w-20 h-20 bg-[var(--accent-color)] rounded-full flex items-center justify-center mx-auto shadow-lg">
+              <i class="fas fa-heart text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Trato meloso</h3>
+            <p class="text-[var(--gray-text-color)]">Aquí entras como cliente y sales como amigo. Siempre.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Frase final épica -->
+      <div class="text-center mt-24">
+        <h2 id="bemeloso" class="text-6xl md:text-8xl font-black text-[var(--primary-color)] tracking-wider">
+          #BEMELOSOMYFRIEND
+        </h2>
+        <p id="textfinal" class="text-2xl md:text-3xl text-[var(--dark-text-color)] mt-8 font-semibold">
+          Porque los mejores momentos saben a café, a abrazo y a Meloso
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark-background-color)] text-white py-12 mt-auto">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-sm opacity-70">© 2025 Meloso Brunch & Coffee • Rúa Rafael Picó 28, Portonovo</p>
+    </div>
+  </footer>
+
+</body>
+</html>

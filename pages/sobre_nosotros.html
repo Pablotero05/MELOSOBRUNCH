@@ -51,10 +51,17 @@
 
   <!-- Botón retroceso -->
   <div class="back-button-wrapper">
-    <a href="javascript:history.back()" class="back-button">
+    <a href="#" class="back-button" id="back-btn">
       <i class="fas fa-arrow-left back-button__icon"></i>
     </a>
   </div>
+
+  <script>
+    document.getElementById('back-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      history.back();
+    });
+  </script>
 
   <!-- Hero cálido y meloso -->
   <section class="relative bg-gradient-to-br from-[#d19f77] via-[#e2b89a] to-[#f2d894] py-32 overflow-hidden">
